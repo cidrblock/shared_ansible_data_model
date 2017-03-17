@@ -1,0 +1,16 @@
+os: ios
+
+interfaces:
+  - bandwidth: 100000
+    description: device2-gi3/5-device-gi0/2
+    inherit_from: interface_routed
+    ip:
+      address: 10.0.250.20
+      netmask: 255.255.255.240
+    name: GigabitEthernet0/2
+  - description: device3-gi5/1-device-gi0/3
+    inherit_from: interface_uplink
+    switchport:
+      trunk_allowed_vlan: 1,2,903-905,915-917,925,926,961,971,980,990-996
+      trunk_native_vlan: 5
+    name: GigabitEthernet0/3

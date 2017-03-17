@@ -1,0 +1,10 @@
+interface_routed:
+  inherit_from: interface
+  type: routed
+
+interface_uplink:
+  inherit_from: interface
+  switchport:
+    mode: dynamic desirable
+    trunk_encapsulation: dot1q
+  type: uplink

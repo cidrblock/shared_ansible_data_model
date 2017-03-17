@@ -1,0 +1,9 @@
+{% for line in ['description', 'bandwidth', 'speed', 'duplex'] %}
+{% if item[line] %}
+{{ line }} {{ item[line] }}
+{% endif %}
+{% endfor %}
+switchport trunk encapsulation {{ item['switchport']['trunk_encapsulation'] }}
+switchport trunk native vlan {{ item['switchport']['trunk_native_vlan'] }}
+switchport trunk allowed vlan {{ item['switchport']['trunk_allowed_vlan'] }}
+switchport mode {{ item['switchport']['mode'] }}

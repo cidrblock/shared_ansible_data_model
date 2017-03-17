@@ -1,0 +1,7 @@
+{% for line in ['description', 'bandwidth', 'speed', 'duplex'] %}
+{% if item[line] %}
+{{ line }} {{ item[line] }}
+{% endif %}
+{% endfor %}
+no switchport
+ip address {{ item['ip']['address'] }} {{ item['ip']['netmask'] }}

@@ -1,0 +1,14 @@
+interface:
+  bandwidth: False              # int
+  description: technical debt   # str
+  duplex: auto                  # str (auto/full/half)
+  speed: auto                   # int (10/100/1000 etc)
+  type: False                   # str (l2/l3)
+  switchport:
+    mode: False                 # str (access/trunk)
+    trunk_allowed_vlan: False   # str (1,2,5,10)
+    trunk_encapsulation: False  # str (dot1q)
+    trunk_native_vlan: False    # int (5)
+  ip_address:
+      ip: False                 # str (10.5.1.1)
+      mask: False               # str (255.255.255.0)

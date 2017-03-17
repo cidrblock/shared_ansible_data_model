@@ -1,0 +1,10 @@
+- name: Render the interfaces based on their os and type
+  set_fact:
+    interface_parent: "{{ 'interface %s' % item['name'] }}"
+    interface_lines: "{{ lookup('template', '%s-%s.j2' % (os, item['type'])) }}"
+
+- name: Show the interface parent
+  debug: var=interface_parent
+
+- name: Show the interface context lines
+  debug: msg="{{ interface_lines.split('\n')[:-1] }}"
