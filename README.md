@@ -131,7 +131,7 @@ class LookupModule(LookupBase):
     interface_lines: "{{ lookup('template', '%s-%s.j2' % (os, item['type'])) }}"
 ```
 
-### jinja templates exist for different profiles to keep the dry and free of complex logic:
+### jinja templates exist for different profiles to keep them dry and free of complex logic:
 
 ```
 # ios-routed.j2
@@ -158,7 +158,7 @@ switchport trunk allowed vlan {{ item['switchport']['trunk_allowed_vlan'] }}
 switchport mode {{ item['switchport']['mode'] }}
 ```
 
-Run and profit:
+### Run and profit:
 
 ```
 ➜  /working ansible-playbook -i inventory.txt site.yml
