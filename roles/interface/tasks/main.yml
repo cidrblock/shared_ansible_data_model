@@ -3,6 +3,6 @@
   set_fact:
     interfaces: "{{ lookup('add_defaults', interfaces, hostvars[inventory_hostname] ) }}"
 
-- name: Render the interfaces based on their os and type
+- name: Switch to OS specific files and templates
   include: "{{ '%s-interface.yml' % os }}"
   with_items: "{{ interfaces }}"
